@@ -1,0 +1,145 @@
+.about-container{
+    display: flex;
+}
+.info-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: 	#04f5ff;
+    border-radius: 10px;
+    overflow: left;
+    width: 30%;
+    color: #38003c;
+}
+.about-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.info-item-team{
+    font-size: 22px;
+    margin-top: -17px;
+    font-weight: bold;
+}
+.detail-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: 	#04f5ff;
+    border-radius: 10px;
+    float: left;
+    width: 60%;
+    color: #38003c;
+}
+
+.info-item-player{
+    font-family: PremierSans-Regular, Arial, "Helvetica Neue", Helvetica, "sans-serif";
+    font-size: 16px;
+    color: #38003c;
+}
+.personal-data {
+    overflow: hidden;
+    color: #38003c;
+}
+.left-element {
+    float: left;
+    width: 50%;
+}
+.right-element {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.info-item:last-child {
+    clear: both;
+}
+.team-data ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    color: #38003c;
+}
+
+.team-data li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: thin solid silver;
+    padding: 10px 0;
+}
+
+.team-data .info-item {
+    text-align: left;
+}
+
+.team-data .info-value {
+    text-align: right;
+}
+
+.chips-container h2{
+    font-size: 24px;
+    color: #38003c;
+    margin-bottom: 10px;
+}
+.chips-container table {
+    color: black;
+    border: 10px silver;
+    width: 100%;
+}
+.chips-container th {
+    color: black;
+    border: 1px silver;
+}
+.past-seasons table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.past-seasons td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.past-seasons th {
+    background-color: #38003c;
+    color: white;
+}
+h2 {
+    font-size: 24px;
+    color: #38003c;
+    margin-bottom: 10px;
+}
+.gameweek-data ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    color: #38003c;
+}
+.gameweek-data li {
+    align-items: center;
+    padding: 10px 0;
+    border-top: thin solid silver;
+}
+.gameweek-data table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.gameweek-data th{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #38003c;
+    color: white;
+}
+.gameweek-data td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.green-row {
+    background-color: #8eff8e; 
+}
+.red-row {
+    background-color: #ff8e8e; 
+}
+
+
