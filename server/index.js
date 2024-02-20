@@ -28,6 +28,16 @@ app.get('/about/:teamId', async (req, res) => {
     }
 });
 
+app.get('/about/:teamId/:gameweek', async (req, res) => {
+    const teamId = req.params.teamId;
+    const gameweek = req.params.gameweek;
+    try {
+        res.status(200).json(response.data);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching team data' });
+    }
+});
+
 const server = app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
     });

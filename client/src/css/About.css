@@ -75,20 +75,22 @@
     text-align: right;
 }
 
-.chips-container h2{
-    font-size: 24px;
-    color: #38003c;
-    margin-bottom: 10px;
-}
 .chips-container table {
-    color: black;
-    border: 10px silver;
     width: 100%;
+    border-collapse: collapse;
 }
+
+.chips-container td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
 .chips-container th {
-    color: black;
-    border: 1px silver;
+    background-color: #38003c;
+    color: white;
 }
+
 .past-seasons table {
     width: 100%;
     border-collapse: collapse;
