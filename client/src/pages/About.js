@@ -102,7 +102,10 @@ const About = () => {
       return "Wildcard";
     } else if (name === "bboost") {
       return "Bench Boost";
-    } else {
+    } else if (name === "freehit") {
+      return "Free Hit";
+    }
+    else {
       return name;
     }
   }
@@ -199,6 +202,7 @@ const About = () => {
       </div>
       <div className="detail-container">
         <h2>This season</h2>
+
         <div className="gameweek-data">
           <table>
             <thead>
