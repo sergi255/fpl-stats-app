@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   const { teamId } = useParams();
+  const [previousOverallRank, setPreviousOverallRank] = useState(null);
   const [playerData, setPlayerData] = useState({
     playerName: "",
     playerLastName: "",
@@ -44,7 +45,6 @@ const About = () => {
         overall_rank: summary_overall_rank,
         region_code: player_region_iso_code_short,
       });
-      // console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -84,6 +84,7 @@ const About = () => {
         chips: transformedChips,
         past: transformedPasts,
       });
+      setPreviousOverallRank(playerData.overall_rank);
 
       console.log(response);
     } catch (error) {
@@ -211,10 +212,10 @@ const About = () => {
                 <th>Points</th>
                 <th>Total Points</th>
                 <th>Rank</th>
+                <th>Percent change</th>
                 <th>GW Rank</th>
                 <th>Transfers</th>
                 <th>Hits</th>
-                <th>Bench Points</th>
                 <th>Value</th>
               </tr>
             </thead>
@@ -226,6 +227,10 @@ const About = () => {
                   const prevWeek = array[index + 1];
                   const isRankLower =
                     prevWeek && week.overall_rank <= prevWeek.overall_rank;
+                  const rankChange = prevWeek ? prevWeek.overall_rank - week.overall_rank : 0;
+                  const rankChangePercent = prevWeek
+                    ? ((rankChange / prevWeek.overall_rank) * 100).toFixed(2)
+                    : 0;
                   const rowClassName = prevWeek
                     ? isRankLower
                       ? "green-row"
@@ -237,17 +242,15 @@ const About = () => {
                   return (
                     <tr key={index} className={rowClassName}>
                       <td>
-                        <Link to={`${week.event}`}>
                           GW{week.event}
-                        </Link>
                       </td>
                       <td>{week.points}</td>
                       <td>{week.total_points}</td>
                       <td>{addThousandSeparator(week.overall_rank)}</td>
+                      <td>{rankChangePercent}%</td>
                       <td>{addThousandSeparator(week.gw_rank)}</td>
                       <td>{week.event_transfers}</td>
                       <td>{week.event_transfers_cost}</td>
-                      <td>{week.points_on_bench}</td>
                       <td>{(parseFloat(week.value) / 10).toFixed(1)}</td>
                     </tr>
                   );
