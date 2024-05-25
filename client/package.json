@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sergi255.github.io/fpl-app",
   "name": "fpl-app",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
+    "predploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

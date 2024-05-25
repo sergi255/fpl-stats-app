@@ -23,7 +23,8 @@ const Home = () => {
     };
 
     return (
-        <Box width="50%" margin="auto">
+        <Box width="100%" margin="auto">
+            <Box width= "70%" margin = "auto">
             <Grid container spacing={3} justifyContent="center">
                 <Grid item xs={12}>
                     <form onSubmit={handleSubmit}>
@@ -44,6 +45,10 @@ const Home = () => {
                     </form>
                 </Grid>
             </Grid>
+            </Box>
+            <div className='home-footer'>
+                Fantasy Premier League App created by Sergiusz Skalski
+            </div>
         </Box>
     );
 };
