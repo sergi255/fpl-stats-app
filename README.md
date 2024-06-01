@@ -10,4 +10,5 @@ The client application is built on React.js and uses many of the core features o
 
 # Page screenshots
 1. Main site - this page display form for entering user FPL ID to get data from API
+<img src = "https://github.com/sergi255/fpl-stats-app/blob/main/screenshots/1-mainsite.png", height = "300"/> 
 2. Stats site - this page display information about user account. On the left side, the display shows information about the user's account: his points and overall ranking. Below that is information about the “chips” used, results from previous years and some statistics from this season (I think, this is quite an interesting feature, because this information is not available on the main page of the game). On the right is the user's entire season history gameweek by gameweek. It shows number of points in separate gameweeks, total number of points, ranking and its percentage change (also not available on the game page),  number of transfers. In the case of promotion, each row of the table is green, if the user ranked down in  ranking the background is red.
