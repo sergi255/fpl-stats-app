@@ -8,6 +8,26 @@ This code defines a simple server application based on Node.js and the Express.j
 # Client side
 The client application is built on React.js and uses many of the core features of the framework.  App also uses React Router to navigate between views and axios to make HTTP requests. Styling was implemented using CSS style sheets. Through the use of React hooks such as useEffect and useState, the app allows for dynamic fetching and updating of data from the server in real time. Finally, the structure and organization of the components allows intuitive navigation and convenient use of the application's functions by the user.
 
+# Project running
+To run project run following commands:
+Install dependencies for the server:
+```
+  cd server
+  npm install 
+```
+Start the server:
+```
+  npm run dev
+```
+Install dependencies for the web client:
+```
+  cd ../client
+  npm install
+```
+Start the web client:
+```
+  npm start
+```
 # Page screenshots
 1. Main site - this page display form for entering user FPL ID to get data from API
 <img src = "https://github.com/sergi255/fpl-stats-app/blob/main/screenshots/1-mainsite.png" height = "300"/> 
